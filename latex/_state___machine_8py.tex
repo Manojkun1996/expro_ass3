@@ -1,0 +1,129 @@
+\hypertarget{_state___machine_8py}{}\doxysection{State\+\_\+\+Machine.\+py File Reference}
+\label{_state___machine_8py}\index{State\_Machine.py@{State\_Machine.py}}
+
+
+This node implements a state machine which permits to move around, detect the ball (if visible), go to sleep, play with the human going to a target defined by a colored ball if he knows the room location.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_state___machine_1_1_room}{State\+\_\+\+Machine.\+Room}}
+\begin{DoxyCompactList}\small\item\em class for storing informations about rooms \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_state___machine_1_1_normal}{State\+\_\+\+Machine.\+Normal}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_state___machine_1_1_normal}{Normal}} State. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_state___machine_1_1_normal___track}{State\+\_\+\+Machine.\+Normal\+\_\+\+Track}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_state___machine_1_1_normal___track}{Normal\+\_\+\+Track}} state. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_state___machine_1_1_sleep}{State\+\_\+\+Machine.\+Sleep}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_state___machine_1_1_sleep}{Sleep}} State. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_state___machine_1_1_play}{State\+\_\+\+Machine.\+Play}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_state___machine_1_1_play}{Play}} State. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_state___machine_1_1_find}{State\+\_\+\+Machine.\+Find}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_state___machine_1_1_find}{Find}} State. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_state___machine_1_1_find___track}{State\+\_\+\+Machine.\+Find\+\_\+\+Track}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_state___machine_1_1_find}{Find}} Track state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_state___machine_8py_a2bbe91bbc1b7cf905ed14026c94f4d61}\label{_state___machine_8py_a2bbe91bbc1b7cf905ed14026c94f4d61}} 
+def {\bfseries State\+\_\+\+Machine.\+clbk\+\_\+ball} (info)
+\item 
+\mbox{\Hypertarget{_state___machine_8py_adeced2c4f08006a8bde068f005d7caab}\label{_state___machine_8py_adeced2c4f08006a8bde068f005d7caab}} 
+def {\bfseries State\+\_\+\+Machine.\+clbk\+\_\+command} (data)
+\item 
+\mbox{\Hypertarget{_state___machine_8py_a33bcbc71d81b7b8918af5039a96fc3a5}\label{_state___machine_8py_a33bcbc71d81b7b8918af5039a96fc3a5}} 
+def {\bfseries State\+\_\+\+Machine.\+clbk\+\_\+odometry} (msg)
+\item 
+\mbox{\Hypertarget{_state___machine_8py_acaf58ed1334fe4530f770b5fb33ab284}\label{_state___machine_8py_acaf58ed1334fe4530f770b5fb33ab284}} 
+def \mbox{\hyperlink{_state___machine_8py_acaf58ed1334fe4530f770b5fb33ab284}{State\+\_\+\+Machine.\+move\+\_\+dog}} (target)
+\begin{DoxyCompactList}\small\item\em client of actionlib server for moving the dog robot using MOVEBASE package \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_state___machine_8py_af0ebb6289585828583dda9970246411d}\label{_state___machine_8py_af0ebb6289585828583dda9970246411d}} 
+def \mbox{\hyperlink{_state___machine_8py_af0ebb6289585828583dda9970246411d}{State\+\_\+\+Machine.\+user\+\_\+action}} ()
+\begin{DoxyCompactList}\small\item\em User Action function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_state___machine_8py_a31b6593bf6ab373b966fc6402cdb0a2c}\label{_state___machine_8py_a31b6593bf6ab373b966fc6402cdb0a2c}} 
+def \mbox{\hyperlink{_state___machine_8py_a31b6593bf6ab373b966fc6402cdb0a2c}{State\+\_\+\+Machine.\+main}} ()
+\begin{DoxyCompactList}\small\item\em main function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_state___machine_8py_add05ad135b51fcb075c58d25c16a1049}{State\+\_\+\+Machine.\+Info\+Ball}} = Ball\+Info\+Msg()
+\begin{DoxyCompactList}\small\item\em Global variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_state___machine_8py_accd10504617d774c51a7b16ad59b3dbf}\label{_state___machine_8py_accd10504617d774c51a7b16ad59b3dbf}} 
+{\bfseries State\+\_\+\+Machine.\+detected}
+\item 
+\mbox{\Hypertarget{_state___machine_8py_ab21db521ac91d687c92ad42fd83900d6}\label{_state___machine_8py_ab21db521ac91d687c92ad42fd83900d6}} 
+{\bfseries State\+\_\+\+Machine.\+radius}
+\item 
+\mbox{\Hypertarget{_state___machine_8py_aadad17e58a0d4934035969fdddaf9ab6}\label{_state___machine_8py_aadad17e58a0d4934035969fdddaf9ab6}} 
+{\bfseries State\+\_\+\+Machine.\+centerx}
+\item 
+\mbox{\Hypertarget{_state___machine_8py_a7f63f5b10fb8f34764dead492d43f7b6}\label{_state___machine_8py_a7f63f5b10fb8f34764dead492d43f7b6}} 
+{\bfseries State\+\_\+\+Machine.\+closeball}
+\item 
+\mbox{\Hypertarget{_state___machine_8py_ad2a9b3250621edfa9ca03bc7ee76d4cf}\label{_state___machine_8py_ad2a9b3250621edfa9ca03bc7ee76d4cf}} 
+{\bfseries State\+\_\+\+Machine.\+firstdetection}
+\item 
+\mbox{\Hypertarget{_state___machine_8py_a72aa0b64c7adb24497d5a39fe566f3a8}\label{_state___machine_8py_a72aa0b64c7adb24497d5a39fe566f3a8}} 
+\mbox{\hyperlink{_state___machine_8py_a72aa0b64c7adb24497d5a39fe566f3a8}{State\+\_\+\+Machine.\+usercommand}} = String()
+\begin{DoxyCompactList}\small\item\em Callback for the command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_state___machine_8py_a8f938d329d4721f5ea6a75e4b3cc2c25}\label{_state___machine_8py_a8f938d329d4721f5ea6a75e4b3cc2c25}} 
+\mbox{\hyperlink{_state___machine_8py_a8f938d329d4721f5ea6a75e4b3cc2c25}{State\+\_\+\+Machine.\+position}} = Point()
+\begin{DoxyCompactList}\small\item\em Callback for the odometry. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_state___machine_8py_a621ecdf5f286284b98ea7761558bd86d}\label{_state___machine_8py_a621ecdf5f286284b98ea7761558bd86d}} 
+int {\bfseries State\+\_\+\+Machine.\+yaw} = 0
+\item 
+list \mbox{\hyperlink{_state___machine_8py_a9e6b430529eae86ead4761e41fffda64}{State\+\_\+\+Machine.\+rooms}}
+\begin{DoxyCompactList}\small\item\em initialization for rooms \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_state___machine_8py_a6f568f751fab76648378ba5153021179}\label{_state___machine_8py_a6f568f751fab76648378ba5153021179}} 
+\mbox{\hyperlink{_state___machine_8py_a6f568f751fab76648378ba5153021179}{State\+\_\+\+Machine.\+vel\+\_\+pub}} = rospy.\+Publisher(\char`\"{}/cmd\+\_\+vel\char`\"{}, Twist, queue\+\_\+size=1)
+\begin{DoxyCompactList}\small\item\em call publisher velocity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_state___machine_8py_a00641fd4e69e469b26b8202553643efe}\label{_state___machine_8py_a00641fd4e69e469b26b8202553643efe}} 
+{\bfseries State\+\_\+\+Machine.\+vel} = Twist()
+\item 
+\mbox{\Hypertarget{_state___machine_8py_a2596b5828c381c4600ebb6a050845297}\label{_state___machine_8py_a2596b5828c381c4600ebb6a050845297}} 
+{\bfseries State\+\_\+\+Machine.\+x}
+\item 
+\mbox{\Hypertarget{_state___machine_8py_af546d982e51da1322e39117935722dce}\label{_state___machine_8py_af546d982e51da1322e39117935722dce}} 
+{\bfseries State\+\_\+\+Machine.\+y}
+\item 
+\mbox{\Hypertarget{_state___machine_8py_a908b5b7f8486b98c16f42f7bf7cbf3c2}\label{_state___machine_8py_a908b5b7f8486b98c16f42f7bf7cbf3c2}} 
+{\bfseries State\+\_\+\+Machine.\+z}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This node implements a state machine which permits to move around, detect the ball (if visible), go to sleep, play with the human going to a target defined by a colored ball if he knows the room location. 
+
+If not, he can find it exploring the environment. 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_state___machine_8py_add05ad135b51fcb075c58d25c16a1049}\label{_state___machine_8py_add05ad135b51fcb075c58d25c16a1049}} 
+\index{State\_Machine.py@{State\_Machine.py}!InfoBall@{InfoBall}}
+\index{InfoBall@{InfoBall}!State\_Machine.py@{State\_Machine.py}}
+\doxysubsubsection{\texorpdfstring{InfoBall}{InfoBall}}
+{\footnotesize\ttfamily State\+\_\+\+Machine.\+Info\+Ball = Ball\+Info\+Msg()}
+
+
+
+Global variables. 
+
+Initialization and Callback for Info\+Ball \mbox{\Hypertarget{_state___machine_8py_a9e6b430529eae86ead4761e41fffda64}\label{_state___machine_8py_a9e6b430529eae86ead4761e41fffda64}} 
+\index{State\_Machine.py@{State\_Machine.py}!rooms@{rooms}}
+\index{rooms@{rooms}!State\_Machine.py@{State\_Machine.py}}
+\doxysubsubsection{\texorpdfstring{rooms}{rooms}}
+{\footnotesize\ttfamily list State\+\_\+\+Machine.\+rooms}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  [   Room(\textcolor{stringliteral}{'LivingRoom'}, \textcolor{stringliteral}{'green'}, 0, 0),}
+\DoxyCodeLine{2             Room(\textcolor{stringliteral}{'Kitchen'}, \textcolor{stringliteral}{'yellow'}, 0, 0),}
+\DoxyCodeLine{3             Room(\textcolor{stringliteral}{'Closet'}, \textcolor{stringliteral}{'red'},0, 0),}
+\DoxyCodeLine{4             Room(\textcolor{stringliteral}{'Entrance'}, \textcolor{stringliteral}{'blue'},0, 0),}
+\DoxyCodeLine{5             Room(\textcolor{stringliteral}{'Bathroom'},\textcolor{stringliteral}{'magenta'},0, 0),}
+\DoxyCodeLine{6             Room(\textcolor{stringliteral}{'Bedroom'}, \textcolor{stringliteral}{'black'}, 0, 0)]}
+
+\end{DoxyCode}
+
+
+initialization for rooms 
+

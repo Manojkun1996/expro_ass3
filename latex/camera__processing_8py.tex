@@ -1,0 +1,53 @@
+\hypertarget{camera__processing_8py}{}\doxysection{camera\+\_\+processing.\+py File Reference}
+\label{camera__processing_8py}\index{camera\_processing.py@{camera\_processing.py}}
+
+
+This node accesses to the camera, handles the images, founding the balls and sends all the informations about them to the state machine node.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcamera__processing_1_1_ball}{camera\+\_\+processing.\+Ball}}
+\begin{DoxyCompactList}\small\item\em class for imformations about balls \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcamera__processing_1_1image__feature}{camera\+\_\+processing.\+image\+\_\+feature}}
+\begin{DoxyCompactList}\small\item\em class for detecting and processing images \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{camera__processing_8py_a477673f68990bf32238aa68ec3a7a884}\label{camera__processing_8py_a477673f68990bf32238aa68ec3a7a884}} 
+def \mbox{\hyperlink{camera__processing_8py_a477673f68990bf32238aa68ec3a7a884}{camera\+\_\+processing.\+main}} ()
+\begin{DoxyCompactList}\small\item\em main \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{camera__processing_8py_ae75cec8f3976b4d7574755f9c0dcb80e}{camera\+\_\+processing.\+balls}}
+\begin{DoxyCompactList}\small\item\em initialization of balls \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This node accesses to the camera, handles the images, founding the balls and sends all the informations about them to the state machine node. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{camera__processing_8py_ae75cec8f3976b4d7574755f9c0dcb80e}\label{camera__processing_8py_ae75cec8f3976b4d7574755f9c0dcb80e}} 
+\index{camera\_processing.py@{camera\_processing.py}!balls@{balls}}
+\index{balls@{balls}!camera\_processing.py@{camera\_processing.py}}
+\doxysubsubsection{\texorpdfstring{balls}{balls}}
+{\footnotesize\ttfamily list camera\+\_\+processing.\+balls}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  [   Ball(\textcolor{stringliteral}{'green'},(50, 50, 20),(70, 255, 255), 0.0, 0, 0, 0),}
+\DoxyCodeLine{2             Ball(\textcolor{stringliteral}{'yellow'},(25, 50, 20),(32, 255, 255), 0.0, 0, 0, 0),}
+\DoxyCodeLine{3             Ball(\textcolor{stringliteral}{'red'},(0, 50, 100),(12, 255, 255), 0.0, 0, 0, 0),}
+\DoxyCodeLine{4             Ball(\textcolor{stringliteral}{'blue'},(105, 50, 20),(135, 255, 255), 0.0, 0, 0, 0),}
+\DoxyCodeLine{5             Ball(\textcolor{stringliteral}{'magenta'},(143, 50, 20),(160, 255, 255), 0.0, 0, 0, 0),}
+\DoxyCodeLine{6             Ball(\textcolor{stringliteral}{'black'},(0, 0, 0),(179, 255, 10), 0.0, 0, 0, 0)]}
+
+\end{DoxyCode}
+
+
+initialization of balls 
+
