@@ -203,23 +203,3 @@ Run the State Machine node separately to print all messages in a single shall:
 ```
 rosrun exp_assignment3 State_Machine.py 
 ```
-
-
-# Systems features 
-
-- Image feature and detection of many balls with different color; 
-- autonomous navigation; 
-- creation of a map: laser-based SLAM (simultaneously localization and mapping); 
-- global and local path planning (creating a costmap), path following, avoidance obstacle in indoor environment; 
-- exploration of unknown environment; 
-- The simulation has been tested for 2 hours: the encountered problems were partly solved and partly reported in the next section. 
-
-# Limitations 
-
-Since in the track states we are interesting in following the ball modifying the velocity according to the distance to the ball, we let the ball move going to subscribe the velocity in the “cmd_vel” topic. This is for sure a limitation of the project because if the robot encounters an obstacle in his path, he can not avoid it, even though the balls are well isolated from each other. 
-For instance, this could occurs when the robot exits from the bedroom: he can detect the red ball and the green ball, which are separated by a wall. If the detection happens before on the red ball, the robot slams into the well and there is no way to get him back on his path. 
-In addition, sometimes, when the robot is in Normal state and detectes the ball, happens that he does not follow the ball, but stores its position without being close to the ball. 
-Another limitation is linked to the usage of only move_base client. For instance, when the robot reached the goal, the server did not recognise that it had completed the action. 
-To solve this issue, a control in loop is done: if the difference between the position by the odometry and the target is lower than a certain value (0.3) then the goal is cancelled. 
-
-
