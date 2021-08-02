@@ -58,22 +58,6 @@ This method is triggered in both the track sub-state, where the target is the ba
 3. Calling the explore-lite service: it is based on the move_base action server. 
 In the Find state it is used, where the robot must look for a specific ball. 
 
-The structure of the state machine is the following: 
-
-<p align="center"> 
-<img src="https://github.com/sararom15/exp_assignment3/blob/main/images/MainStateMachine.png">
-</p>
-
-As said and explained before, the four behaviors are represented by four different states in the node: the normal and the find states are also two containers and so they have substates as well, respectively Normal_track and Find_Track. 
-
-<p align="center"> 
-<img src="https://github.com/sararom15/exp_assignment3/blob/main/images/NormalContainer.png">
-</p>
-
-<p align="center"> 
-<img src="https://github.com/sararom15/exp_assignment3/blob/main/images/FindContainer.png">
-</p>
-
 1. NORMAL_CONTAINER: 
    - NORMAL: in a loop, the robot can move in the environment, sending a goal to move_base action server a random target. Whether a new ball is detected, the goal of the move_base is cancelled and it switches in NORMAL_TRACK. In case it does not detect ball, the loop continues for three times (a counter is set). After that it can switch or in Play or in Sleep, according to a random choice. 
 When the play state is chosen, the node waits the command by “Commander” node, reads the target and then switches in Play. 
@@ -100,18 +84,15 @@ If the found ball coincides with the target, everything is fine. Otherwise the p
 ### slam_gmapping
 The node is contained in the Gmapping package, which must be launched before the simulation. It provides laser-based SLAM (Simultaneous Localization and Mapping): it creates a 2D occupancy grid map from lased and pose data collected by a mobile robot. 
 In order to make a map, a robot with a laser scan and the odometry data are needed. 
-More about Gmapping [here](http://wiki.ros.org/gmapping).
 
 ### move_base 
 The node is part of ROS navigation stack. It provides an implementation of an action (actionlib), that given a goal, will attempt to reach it. The move_base links together a global and local planner. 
 a) There are three default global planners: carrot planner, navfn and global planner. The first one in complicated indoor environment, is not very practical. The second one (used by default, but it can be changes of course) uses Dijstra's algorithm to find a global path with minimum cost between the start point and the goal. The third one has more options than navfn and supports A* algorithm. 
 b) Possible local planners are dwa local planner, eband local planner and teb local planner. They change according to different algorithms to generate velocity. 
-More about move_base [here](http://wiki.ros.org/move_base).
 
 ### explore-lite 
 The node performs frontier based exploration of the world. For this purpose, it must be launched together with the move_base as the node sends commands to the server for allowing greedy exploration.
 It does not create its own costmap, which makes it easier to configure. 
-More about explore-lite [here](http://wiki.ros.org/explore_lite). 
 
 ## ROS Parameters and messages
 ### ROS Parameters 
@@ -143,11 +124,6 @@ std_msgs/Float64 firstdetection
 ## The robot 
 Since no robot is given in the initial simulation, few words about it need to be spent. 
 Although the structure remains similar to the one in the previous assignment, with some modifications: we have a differential drive robot, with two wheels;  a neck (fixed with the link chassis); a head, which is fixed on the neck in this case: so the revolute joint has been replaced by a fixed joint; a RGB camera, fixed on the head; in addition a hokuyo laser scan has been fixed on the link chassis (needed for slam_mapping). 
-Here the URDF graph is showed. 
-
-<p align="center"> 
-<img src="https://github.com/sararom15/exp_assignment3/blob/main/images/RobotURDF.png">
-</p>
 
 # Package and file list 
 There exist some folders in the package: 
