@@ -155,7 +155,7 @@ After that, it is possible to proceed with the installation.
 
 First of all, clone the repository in your workspace. 
 
-Then, build the project from the workspace, in order that all message files are created.
+Then, We build the project from the workspace, in order that all message files are created.
 
 ```
  cd “yourworkspace”_ws 
