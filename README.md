@@ -179,3 +179,5 @@ Run the State Machine node separately to print all messages in a single shall:
 ```
 rosrun exp_assignment3 State_Machine.py 
 ```
+# Author
+Manoj Kunapalli(manoj.bemt.14@gmail.com)
